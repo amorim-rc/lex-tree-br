@@ -12,9 +12,9 @@ Códigos Disponíveis:
 
 [x] Código Civil (Lei nº 10.406/2002)
 
-[ ] Código de Processo Civil (Lei nº 13.105/2015)
+[x] Código de Processo Civil (Lei nº 13.105/2015)
 
-[ ] Código Penal (Decreto-Lei nº 2.848/1940)
+[x] Código Penal (Decreto-Lei nº 2.848/1940)
 
 [ ] Código de Processo Penal (Decreto-Lei nº 3.689/1941)
 
