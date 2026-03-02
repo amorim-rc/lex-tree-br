@@ -46,6 +46,7 @@
                 <option value="cc">Código Civil (Lei 10.406/02)</option>
                 <option value="cpc">Código de Processo Civil (Lei 13.105/15)</option>
                 <option value="cp">Código Penal (Decreto-Lei 2.848/40)</option>
+                <option value="cpp">Código de Processo Penal (Decreto-Lei 3.689/41)</option>
             </select>
         </div>
     </header>
@@ -346,10 +347,75 @@
             ]
         };
 
+        // ==========================================
+        // DADOS: CÓDIGO DE PROCESSO PENAL
+        // ==========================================
+        const cppData = {
+            name: "Código de Processo Penal", label: "CPP", subtitle: "Raiz",
+            content: "Decreto-Lei nº 3.689/1941. Estabelece as regras e procedimentos para a persecução penal, desde a fase investigatória até o julgamento e recursos cabíveis.",
+            children: [
+                {
+                    name: "Livro I - Do Processo em Geral", label: "Livro I", subtitle: "Arts. 1º a 393",
+                    content: "Reúne as normas fundamentais sobre investigação, ação penal, competência, provas, sujeitos do processo, prisões cautelares e sentença.",
+                    children: [
+                        { name: "Título I - Disposições Preliminares", label: "Título I", subtitle: "Arts. 1º a 3º-F", content: "Aplicação da lei processual penal e criação do juiz das garantias." },
+                        { name: "Título II - Do Inquérito Policial", label: "Título II", subtitle: "Arts. 4º a 23", content: "Fase pré-processual e investigação conduzida pela polícia judiciária." },
+                        { name: "Título III - Da Ação Penal", label: "Título III", subtitle: "Arts. 24 a 62", content: "Ação penal de iniciativa pública (incondicionada e condicionada) e privada." },
+                        { name: "Título IV - Da Ação Civil", label: "Título IV", subtitle: "Arts. 63 a 68", content: "Regras para a reparação do dano causado pela infração penal." },
+                        { name: "Título V - Da Competência", label: "Título V", subtitle: "Arts. 69 a 91", content: "Determinação do juízo competente (lugar da infração, domicílio, prevenção, conexão ou continência)." },
+                        { name: "Título VI - Questões e Processos Incidentes", label: "Título VI", subtitle: "Arts. 92 a 154", content: "Questões prejudiciais, exceções, restituição de coisas apreendidas, falsidade de documento e insanidade mental." },
+                        { name: "Título VII - Da Prova", label: "Título VII", subtitle: "Arts. 155 a 250", content: "Corpo de delito, perícias, interrogatório, testemunhas, acareação, documentos e busca e apreensão." },
+                        { name: "Título VIII - Sujeitos do Processo", label: "Título VIII", subtitle: "Arts. 251 a 281", content: "Do juiz, do Ministério Público, do acusado, defensor, assistentes e funcionários da justiça." },
+                        { name: "Título IX - Prisão, Medidas Cautelares e Liberdade", label: "Título IX", subtitle: "Arts. 282 a 350", content: "Prisão em flagrante, preventiva, medidas cautelares diversas da prisão e liberdade provisória com ou sem fiança." },
+                        { name: "Título X - Das Citações e Intimações", label: "Título X", subtitle: "Arts. 351 a 372", content: "Regras para a comunicação formal dos atos processuais penais." },
+                        { name: "Título XI - Aplicação Provisória", label: "Título XI", subtitle: "Arts. 373 a 380", content: "Interdições de direitos e medidas de segurança aplicadas provisoriamente." },
+                        { name: "Título XII - Da Sentença", label: "Título XII", subtitle: "Arts. 381 a 393", content: "Requisitos essenciais da sentença, hipóteses de absolvição e de condenação." }
+                    ]
+                },
+                {
+                    name: "Livro II - Dos Processos em Espécie", label: "Livro II", subtitle: "Arts. 394 a 562",
+                    content: "Estabelece os diferentes ritos e procedimentos aplicáveis ao julgamento das infrações penais.",
+                    children: [
+                        { name: "Título I - Do Processo Comum", label: "Título I", subtitle: "Arts. 394 a 497", content: "Instrução criminal, procedimentos ordinário e sumário, e rito especial do Tribunal do Júri." },
+                        { name: "Título II - Dos Processos Especiais", label: "Título II", subtitle: "Arts. 503 a 548", content: "Crimes de responsabilidade de funcionários públicos, crimes contra a honra e contra a propriedade imaterial." },
+                        { name: "Título III - Processos em Tribunais", label: "Título III", subtitle: "Arts. 556 a 562", content: "Regras dos processos de competência originária do STF e dos Tribunais de Apelação." }
+                    ]
+                },
+                {
+                    name: "Livro III - Das Nulidades e dos Recursos", label: "Livro III", subtitle: "Arts. 563 a 667",
+                    content: "Sistema de invalidação de atos processuais com defeito e os meios de impugnação contra as decisões judiciais.",
+                    children: [
+                        { name: "Título I - Das Nulidades", label: "Título I", subtitle: "Arts. 563 a 573", content: "Princípio do prejuízo, causas de nulidade absoluta e relativa, e sua decretação." },
+                        { name: "Título II - Dos Recursos em Geral", label: "Título II", subtitle: "Arts. 574 a 667", content: "Recurso em Sentido Estrito, Apelação, Embargos, Revisão Criminal, Habeas Corpus e Carta Testemunhável." }
+                    ]
+                },
+                {
+                    name: "Livro IV - Da Execução", label: "Livro IV", subtitle: "Arts. 668 a 779",
+                    content: "Regras do processo de execução das penas e medidas de segurança (em sua maioria, suplantadas pela Lei de Execução Penal).",
+                    children: [
+                        { name: "Título I - Disposições Gerais", label: "Título I", subtitle: "Arts. 668 a 673", content: "Princípios da execução e guia de recolhimento." },
+                        { name: "Título II - Execução das Penas em Espécie", label: "Título II", subtitle: "Arts. 674 a 709", content: "Execução das penas privativas de liberdade, pecuniárias e acessórias." },
+                        { name: "Título III - Dos Incidentes da Execução", label: "Título III", subtitle: "Arts. 710 a 733", content: "Suspensão condicional da pena, livramento condicional e unificação das penas." },
+                        { name: "Título IV - Graça, Indulto e Anistia", label: "Título IV", subtitle: "Arts. 734 a 750", content: "Extinção e comutação de penas e processo de reabilitação criminal." },
+                        { name: "Título V - Execução das Medidas de Segurança", label: "Título V", subtitle: "Arts. 751 a 779", content: "Internação em hospital de custódia e tratamento ambulatorial." }
+                    ]
+                },
+                {
+                    name: "Livro V - Relações Jurisdicionais", label: "Livro V", subtitle: "Arts. 780 a 790",
+                    content: "Relações com autoridades estrangeiras, como cumprimento de cartas rogatórias, homologação de sentença e extradição."
+                },
+                {
+                    name: "Livro VI - Disposições Gerais", label: "Livro VI", subtitle: "Arts. 791 a 811",
+                    content: "Regras finais do Código sobre tramitação de autos, prazos processuais e disposições transitórias."
+                }
+            ]
+        };
+
         const datasets = {
             'cc': civilCodeData,
             'cpc': cpcData,
-            'cp': cpData
+            'cp': cpData,
+            'cpp': cppData
         };
 
         // ==========================================
@@ -392,7 +458,7 @@
             // Recolhe nós iniciais para visualização limpa
             if(root.children) {
                 root.children.forEach(child => {
-                    if (child.data.label === "Parte Especial") {
+                    if (child.data.label === "Parte Especial" || child.data.label === "Livro II" || child.data.label === "Livro III" || child.data.label === "Livro IV" || child.data.label === "Livro V" || child.data.label === "Livro VI") {
                         collapse(child);
                     } else if (child.children) {
                         child.children.forEach(grandchild => collapse(grandchild));
