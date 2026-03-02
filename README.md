@@ -16,9 +16,9 @@ Códigos Disponíveis:
 
 [x] Código Penal (Decreto-Lei nº 2.848/1940)
 
-[ ] Código de Processo Penal (Decreto-Lei nº 3.689/1941)
+[x] Código de Processo Penal (Decreto-Lei nº 3.689/1941)
 
-[ ] Constituição da República Federativa do Brasil de 1988
+[x] Constituição da República Federativa do Brasil de 1988
 
 🚀 Como Usar
 
