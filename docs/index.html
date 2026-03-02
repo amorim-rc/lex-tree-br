@@ -536,10 +536,8 @@
             if(root.children) {
                 root.children.forEach(child => {
                     if (dataKey === 'cf') {
-                        // Para a CF/88, mostra todos os Títulos, mas recolhe os Capítulos internos
-                        if (child.children) {
-                            child.children.forEach(grandchild => collapse(grandchild));
-                        }
+                        // Para a CF/88, mostra todos os Títulos (raiz aberta), mas os recolhe para esconder os Capítulos
+                        collapse(child);
                     } else {
                         // Para os Códigos, recolhe as Partes Especiais inteiras e recolhe os netos da Parte Geral
                         if (child.data.label === "Parte Especial" || child.data.label.startsWith("Livro II") || child.data.label.startsWith("Livro III") || child.data.label.startsWith("Livro IV") || child.data.label.startsWith("Livro V") || child.data.label.startsWith("Livro VI") || child.data.label === "Disposições F." || child.data.label === "Livro Comp.") {
